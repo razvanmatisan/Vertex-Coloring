@@ -1,0 +1,16 @@
+TEST 5
+
+Chromatic number: 2
+
+/////////// For Greedy Algorithm ///////////
+
+The algorithm used 5 colors!
+Assigned Colors are: 
+0 0 1 1 2 2 3 3 4 4 
+
+/////////// For Backtracking Algorithm ///////////
+
+The algorithm used 2 colors!
+Assigned Colors are: 
+0 1 0 1 0 1 0 1 0 1 
+

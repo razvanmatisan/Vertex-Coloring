@@ -1,0 +1,75 @@
+Nume: Matisan Razvan-Andrei
+Grupa: 324CA
+Email: razvan.matisan@stud.acs.upb.ro
+
+////////// Problema colorarii nodurilor unui graf /////////
+
+IMPORTANT: test11.in DUREAZA CEL MULT 5-7 SECUNDE.
+
+1. Continutul proiectului:
+  
+* fisierul algo.h ce contine clasa Graph, impreuna cu semnaturile metodelor
+aplicate acesteia.
+
+* fisierul algo.cpp unde sunt implementate metodele/constructorul clasei Graph
+(metodele includ algoritmii de colorare, respectiv functii ajutatoare pentru acestia)
+
+* fisierul algo_test.cpp unde este scrisa logica programului (definirea grafului
+si aplicarea celor 2 algoritmi de colorare a nodurilor):
+  - unul exact (Backtracking)
+  - unul de aproximare (Greedy)
+
+* Un fisier Makefile cu regulile build, run_tests si clean (si flag-urile -Wall -Wextra -g)
+
+* Un director in, ce contine 12 teste .in.
+
+* Un director out, ce include cele 12 fisiere .out, rezultate dupa rularea programului
+si a testelor.
+
+
+2. Cum rulez programul?
+
+* Programul se ruleaza din terminal, folosind comanda "make" pentru compilare, respectiv
+"run_tests" pentru executarea sa. 
+
+
+3. Informatii utile despre teste
+
+* Continutul fisierelor .in este urmatorul:
+  - pe prima linie se afla numarul cromatic al grafului
+  - pe a doua linie apare numarul de varfuri al grafului
+  - pe restul liniilor sunt date cate 2 numere ce reprezinta noduri adiacente (formeaza o muchie).
+
+* Tipurile de graf din fiecare test:
+  - test1.in -> graf simplu, cu 4 noduri si 5 muchii (din cele maximum 6 pe care le putea avea)
+  - test2.in -> graf simplu, cu 8 varfuri si 12 muchii, pe care algoritmul Greedy coloreaza cu numar
+  minim de culori graful.
+  - test3.in -> acelasi graf de la test2.in, insa indexarea nodurilor este facuta diferit 
+  (Greedy afiseaza un rezultat aproximativ).
+  - test4.in -> graf 3-regulat
+  - test5.in -> "crown graph" cu 10 noduri, caz particular de graf bipartit, pe care algoritmul Greedy,
+  pentru un graf cu n noduri, foloseste n/2 culori (in acest caz - 5).
+  - test6.in -> graf neregulat cu 11 noduri si 17 muchii 
+  - test7.in -> primul graf simplex al grafului triunghi (8 noduri)
+  - test8.in -> graf gol cu 100 de noduri
+  - test9.in -> graf de tip grid (5x5) cu 25 de noduri care, in plus, pentru fiecare patratel,
+  exista cate o pereche de varfuri opuse ce formeaza o muchie.
+  - test10.in -> graf complet cu 11 noduri (Backtracking ul ruleaza in 3-5 secunde)
+  - test11.in -> graf complet cu 12 noduri (Backtracking ul ruleaza cateva minute bune; nu am
+  afisat rezultatul pentru acesta)
+  - test12.in -> graf planar cu 31 de varfuri si 46 muchii.
+
+
+4. Ce se afiseaza in fisierele de output?
+
+* In fisierele de output apare numarul cromatic al grafului, numarul de culori folosite pentru
+fiecare algoritm in parte, respectiv cate o colorare realizata de fiecare solutie in parte.
+
+
+5. Referinte pentru cod/teste:
+
+* Algoritmul lui Greedy, respectiv cel de Backtracking pentru colorarea nodurilor unui graf
+au fost adaptati prezentarii mele, insa, in prima faza, ei au fost "preluati" dupa urmatoarele
+doua site-uri:
+  - https://www.geeksforgeeks.org/graph-coloring-set-2-greedy-algorithm/
+  - https://www.geeksforgeeks.org/m-coloring-problem-backtracking-5/
